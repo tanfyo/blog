@@ -639,6 +639,8 @@ type Mutation {
     """Information about the post to be published."""
     input: PublishPostInput!
   ): PublishPostPayload!
+  """Removes a post."""
+  removePost(input: RemovePostInput!): RemovePostPayload!
   """Reschedule a post."""
   reschedulePost(input: ReschedulePostInput!): ScheduledPostPayload
   subscribeToNewsletter(input: SubscribeToNewsletterInput!): SubscribeToNewsletterPayload!
@@ -1760,6 +1762,16 @@ type RedirectionRule {
   source: String!
   """The type of the redirection rule."""
   type: HttpRedirectionType!
+}
+
+input RemovePostInput {
+  """The ID of the post to remove."""
+  id: ID!
+}
+
+type RemovePostPayload {
+  """The deleted post."""
+  post: Post
 }
 
 """

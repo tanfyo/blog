@@ -614,6 +614,8 @@ export type Mutation = {
   addPostToSeries: AddPostToSeriesPayload;
   /** Creates a new post. */
   publishPost: PublishPostPayload;
+  /** Removes a post. */
+  removePost: RemovePostPayload;
   /** Reschedule a post. */
   reschedulePost?: Maybe<ScheduledPostPayload>;
   subscribeToNewsletter: SubscribeToNewsletterPayload;
@@ -636,6 +638,11 @@ export type MutationAddPostToSeriesArgs = {
 
 export type MutationPublishPostArgs = {
   input: PublishPostInput;
+};
+
+
+export type MutationRemovePostArgs = {
+  input: RemovePostInput;
 };
 
 
@@ -1780,6 +1787,17 @@ export type RedirectionRule = {
   source: Scalars['String']['output'];
   /** The type of the redirection rule. */
   type: HttpRedirectionType;
+};
+
+export type RemovePostInput = {
+  /** The ID of the post to remove. */
+  id: Scalars['ID']['input'];
+};
+
+export type RemovePostPayload = {
+  __typename?: 'RemovePostPayload';
+  /** The deleted post. */
+  post?: Maybe<Post>;
 };
 
 /**
