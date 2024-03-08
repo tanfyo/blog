@@ -1,0 +1,171 @@
+.parent{
+    height: fit-content;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .editorContainer {
+        color: #fff;
+        width: 95vw;
+        height: fit-content;
+        background: #20344D;
+        border: 2px solid #000;
+        border-radius: 20px;
+        padding: 1em;
+
+        .tabs {
+            width: 100%;
+            height: fit-content;
+            display: flex;
+            align-items: center;
+            gap: .5em;
+            margin-bottom: .5em;
+
+            .tab {
+                background: #10141F;
+                border-radius: 10px;
+                padding: .5em 1em;
+                border: 2px solid #000;
+            }
+
+            .tab::after {
+                content: " Blogs";
+            }
+
+            .tab:hover {
+                cursor: pointer;
+                background: #000;
+                transition: all .5s ease;
+            }
+        }
+
+        .courseContainer {
+            width: 100%;
+            height: fit-content;
+            background: #10141F;
+            border: 2px solid #000;
+            border-radius: 15px;
+            padding: 1em 1.5em;
+            line-height: 1.2;
+
+            h1 {
+                font-size: 3rem;
+                font-weight: 800;
+                line-height: 1.1;
+
+                span {
+                    color: #325c8f;
+                }
+            }
+
+            p {
+                color: #ffffff77;
+                font-size: 1.2rem;
+                margin-top: .5em;
+                line-height: 1.5;
+            }
+
+            .swiper {
+                margin-top: 1em;
+            }
+
+            .swiper .swiperSlider {
+                width: 400px;
+                aspect-ratio: 16/9;
+                border: 5px solid #fff;
+                border-radius: 15px;
+                overflow: hidden;
+                span {
+                    position: inherit !important;
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 10px;
+                    transition: scale .5s ease;
+
+                }
+            }
+
+            .swiperSlider:hover img {
+                scale: 1.2;
+            }
+        }
+    }
+}
+
+
+
+
+@media screen and (max-width: 650px) {
+    .courseContainer {
+        h1 {
+            font-size: 1.5rem !important;
+        }
+
+        p {
+            font-size: .8rem !important;
+        }
+
+        .swiper .swiperSlider {
+            width: 300px !important;
+        }
+    }
+
+    .tabs .tab {
+        font-size: .8rem;
+    }
+
+    .tabs {
+        margin-bottom: .25em !important;
+    }
+
+    .editorContainer {
+        padding: .5em !important;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+
+    .editorContainer {
+        margin-bottom: 1em;
+    }
+
+    .courses .headline {
+        margin: 2em 0 1em 0;
+    }
+
+    .tab::after {
+        content: " " !important;
+    }
+
+    .workflow .btns, .services .btns {
+        margin-top: -.5em;
+    }
+
+    .blogs .swiper {
+        margin: 0em;
+    }
+    .btns {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        gap: .25em !important;
+    }
+    .btns button {
+        font-size: .8rem;
+        display: flex;
+        align-items: center;
+        margin: 0 !important;
+        justify-content: center;
+        width: 100%;        
+    }
+
+    .blogs .btns {
+        margin-top: 1.5em !important;
+    }
+
+}
