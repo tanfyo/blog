@@ -33,7 +33,7 @@ const FeaturedPosts = (props: {
 
   return (
     <div className="blog-featured-area mx-auto border-b bg-slate-50 dark:border-slate-800 dark:bg-black">
-      <div className="blog-featured-container container mx-auto grid grid-cols-1 gap-8 px-4 py-4 md:grid-flow-col md:grid-cols-2 md:grid-rows-2 xl:grid-cols-3 xl:py-10 xl:px-10 2xl:px-24 2xl:py-10">
+      <div className="blog-featured-container container mx-auto grid grid-cols-1 px-4 py-4 md:grid-flow-col md:grid-cols-2 md:grid-rows-2 xl:grid-cols-3 xl:py-10 xl:px-10 2xl:px-24 2xl:py-10">
         {posts.map((post, index) => {
           const postURL = `/${post.slug}`;
           const isFirstPost = index === 0;
@@ -77,7 +77,7 @@ const FeaturedPosts = (props: {
               </Link>
               <h1
                 className={twJoin(
-                  'blog-article-card-title mx-4 mb-3 block font-heading font-extrabold text-slate-900 hover:opacity-75 dark:text-slate-100',
+                  'blog-article-card-title mx-4 mb-3 block font-heading font-semibold text-slate-900 hover:opacity-75 dark:text-slate-100',
                   isFirstPost ? 'text-xl md:text-3xl lg:text-4xl' : 'text-xl',
                 )}
               >

@@ -8,24 +8,25 @@ export const config = {
 };
 
 const fontRegular = fetch(
-	new URL('../../../assets/PlusJakartaSans-Regular.ttf', import.meta.url),
+	new URL('../../../assets/Outfit-Light.ttf', import.meta.url),
 ).then((res) => res.arrayBuffer());
 
 const fontMedium = fetch(
-	new URL('../../../assets/PlusJakartaSans-Medium.ttf', import.meta.url),
+	new URL('../../../assets/Outfit-Regular.ttf', import.meta.url),
 ).then((res) => res.arrayBuffer());
 
 const fontSemiBold = fetch(
-	new URL('../../../assets/PlusJakartaSans-SemiBold.ttf', import.meta.url),
+	new URL('../../../assets/Outfit-Medium.ttf', import.meta.url),
 ).then((res) => res.arrayBuffer());
 
-const fontBold = fetch(new URL('../../../assets/PlusJakartaSans-Bold.ttf', import.meta.url)).then(
+const fontBold = fetch(new URL('../../../assets/Outfit-SemiBold.ttf', import.meta.url)).then(
 	(res) => res.arrayBuffer(),
 );
 
 const fontExtraBold = fetch(
-	new URL('../../../assets/PlusJakartaSans-ExtraBold.ttf', import.meta.url),
+	new URL('../../../assets/Pacifico-Regular.ttf', import.meta.url),
 ).then((res) => res.arrayBuffer());
+
 
 const kFormatter = (num: number) => {
 	return num > 999 ? `${(num / 1000).toFixed(1)}K` : num;
@@ -64,7 +65,7 @@ export default async function handler(req: NextRequest) {
 		(
 			<div
 				style={{
-					fontFamily: '"Plus Jakarta Sans"',
+					fontFamily: 'Outfit',
 				}}
 				tw={`relative flex h-full w-full p-8 bg-white`}
 			>
@@ -72,7 +73,7 @@ export default async function handler(req: NextRequest) {
 				{/* if the site is set to open in dark mode by default, change text-black to text-white and bg-white to bg-black */}
 				{!isTeam && (
 					<div
-						tw={`flex w-full flex-col items-center justify-center text-black h-full p-10 bg-[${bannerBackground}] relative rounded-xl`}
+						tw={`flex w-full flex-col items-center justify-center text-black h-full p-10 bg-[${bannerBackground}] relative`}
 					>
 						<div tw="absolute -top-px -left-px -right-px -bottom-px rounded-xl border-2 border-black/5" />
 						<div tw="mx-auto flex flex-row items-center" style={{ width: '90%' }}>
@@ -191,31 +192,31 @@ export default async function handler(req: NextRequest) {
 			height: 630,
 			fonts: [
 				{
-					name: 'Typewriter',
+					name: 'Outfit',
 					data: fontDataRegular,
 					style: 'normal',
 					weight: 400,
 				},
 				{
-					name: 'Typewriter',
+					name: 'Outfit',
 					data: fontDataMedium,
 					style: 'normal',
 					weight: 500,
 				},
 				{
-					name: 'Typewriter',
+					name: 'Outfit',
 					data: fontDataSemiBold,
 					style: 'normal',
 					weight: 600,
 				},
 				{
-					name: 'Typewriter',
+					name: 'Outfit',
 					data: fontDataBold,
 					style: 'normal',
 					weight: 700,
 				},
 				{
-					name: 'Typewriter',
+					name: 'Outfit',
 					data: fontDataExtraBold,
 					style: 'normal',
 					weight: 800,
